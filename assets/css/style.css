@@ -1,0 +1,68 @@
+body {
+	background-image: url("../images/crystalBackground.jpg");
+	color: white;
+}
+
+#wrapper {
+	background-color: black;
+	text-align: center;
+	width: 100%;
+}
+
+#rules {
+	text-align: center;
+	background-color: black;
+	width: 33.33%;
+	margin-left: 33.33%;
+	padding: 20px;
+}
+
+#scorebox {
+	text-align: center;
+	background-color: black;
+	float: right;
+	overflow: auto;
+	margin-right: 10%;
+}
+
+
+#current-number-section {
+	clear: both;
+	float: left;
+	background-color: black;
+	overflow: auto;
+	margin-left: 10%;
+}
+
+.section-title {
+	padding-left: 50px;
+	padding-right: 50px;
+	
+}
+
+#wins {
+	padding-right: 50px;
+}
+
+#losses {
+	padding-right: 50px;
+	padding-bottom: 50px;
+	padding-top: 10px;
+}
+
+#total-score-section {
+	clear: both;
+	float: left;
+	background-color: black;
+	overflow: auto;
+	margin-left: 10%;
+
+}
+
+#crystal-section {
+	clear: both;
+	background color: black;
+	position: absolute;
+	right: 37%;
+	padding-top: 20px;
+}
