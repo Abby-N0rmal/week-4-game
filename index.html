@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Crystal Collector</title>
+    <link rel="stylesheet" href=../css/"style.css">
+
+  </head>
+  <body>    
+    <div id="wrapper">
+      <h1 class="chrome">Crystal Collector</h1>
+    </div>
+
+        <div id="game-rules">
+        <p>You will be given a random number at the start of the game.</p>
+        <p>There are four crystals below. By clicking on a crystal you will
+        add a specific amount of points to your total score.</p>
+        <p>The value of each crystal is hidden from you until you click on it.</p>
+        <p>Each time when the game starts, the game will change the values of the crystals.</p>
+        <div>
+          <h3 class="section-title">Wins</h3>
+          <!-- The div where the wins will be shown. -->
+          <div id="wins"></div>
+        </div>
+        <div>
+          <h3 class="section-title">Losses</h3>
+          <!-- The div where the losses will be shown. -->
+          <div id="wins"></div>
+        </div>
+        <div id="current-number-section">
+          <h3 class="section-title"> Your number here</h3>
+          <!-- The div where the current number to guess will be shown. -->
+        </div>
+        <div id="total-score-section">
+          <h3 class="section-score">Your total score is:</h3>
+          <!-- The div where the added number from the crystals is shown. -->
+        </div>
+        <div id="crystal-section">
+          <button class= "btn btn-lg red-button"> red crystal </button>
+          <button class= "btn btn-lg green-button"> green crystal </button>
+          <button class= "btn btn-lg blue-button"> blue crystal </button>
+          <button class= "btn btn-lg purple-button"> purple crystal </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Linking to our JavaScript file. -->
+    <script type="text/javascript" src=../javascript/"game.js"></script>
+  </body>
+</html>
