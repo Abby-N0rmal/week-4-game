@@ -3,27 +3,39 @@
   <head>
     <meta charset="UTF-8">
     <title>Crystal Collector</title>
+
+    <!-- jQuery Link -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Game Logic -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
   </head>
   <body>    
+
     <div id="wrapper">
       <h1 class="chrome"><a href="https://cooltext.com"><img src="https://images.cooltext.com/5098435.png" width="834" height="105" alt="Crystal Collector" /></a></h1>
     </div>
 
-    <div id="rules">
-        <p>You will be given a random number at the start of the game.</p>
-        <p>There are four crystals below. By clicking on a crystal you will
-        add a specific amount of points to your total score.</p>
-        <p>The value of each crystal is hidden from you until you click on it.</p>
-        <p>Each time when the game starts, the game will change the values of the crystals.</p>
+    <div class="text-background">
+      <div class="rainbow">
+          <p>You will be given a random number at the start of the game.</p>
+          <p>There are four crystals below. By clicking on a crystal you will
+          add a specific amount of points to your total score.</p>
+          <p>The value of each crystal is hidden from you until you click on it.</p>
+          <p>Each time when the game starts, the game will change the values of the crystals.</p>
+      </div>
     </div>
 
     <div id="crystal-section">
-          <button class= "red-button"><img src="assets/images/red.jpg" height="200" width="75" ></button>
-          <button class= "green-button"><img src="assets/images/green.jpg" height="200" width="75"></button>
-          <button class= "blue-button"><img src="assets/images/blue.jpg" height="200" width="75"></button>
           <button class= "purple-button"><img src="assets/images/purple.jpg" height="200" width="75"></button>
+          <button class= "blue-button"><img src="assets/images/blue.jpg" height="200" width="75"></button>
+          <button class= "green-button"><img src="assets/images/green.jpg" height="200" width="75"></button>
+          <button class= "red-button"><img src="assets/images/red.jpg" height="200" width="75" ></button>
+          
+          
+          
     </div>
 
     <div id="current-number-section">
@@ -39,20 +51,13 @@
       <div id="losses">Losses:</div>
           <!-- The div where the losses will be shown. -->
     </div>
-      
-        
-     
-        
+           
     <div id="total-score-section">
           <h3 class="section-title">Your total score is:</h3>
           <!-- The div where the added number from the crystals is shown. -->
      </div>
         
-      
     </div>
   </div>
-
-    <!-- Linking to the JavaScript file. -->
-    <script type="text/javascript" src=../javascript/"game.js"></script>
-  </body>
+ </body>
 </html>
