@@ -125,3 +125,9 @@ body {
 #green {
 	box-shadow: 12px 12px 12px black;
 }
+
+
+@media screen and (max-width: 400px) {
+	#crystal-section {
+		margin-left: 75%;
+	}
