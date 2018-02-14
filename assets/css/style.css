@@ -17,13 +17,20 @@ body {
 	background-color: black;
 	width: 33.33%;
 	margin-left: 33.33%;
+	margin-top: 20px;
 	padding: 20px;
+	border-style: ridge;
+    border-width: 5px;
+    box-shadow: 12px 12px 12px black;
 }
 
 #wrapper {
 	background-color: black;
 	text-align: center;
-	width: 100%;
+	width: 99.5%;
+	border-style: ridge;
+    border-width: 5px;
+    box-shadow: 12px 12px 12px black;
 }
 
 #scorebox {
@@ -32,6 +39,9 @@ body {
 	float: right;
 	overflow: auto;
 	margin-right: 10%;
+	border-style: ridge;
+    border-width: 5px;
+    box-shadow: 12px 12px 12px black;
 }
 
 
@@ -41,11 +51,15 @@ body {
 	background-color: black;
 	overflow: auto;
 	margin-left: 10%;
+	border-style: ridge;
+    border-width: 5px;
+    box-shadow: 12px 12px 12px black;
 }
 
 .section-title {
 	padding-left: 50px;
 	padding-right: 50px;
+	
 	
 }
 
@@ -65,13 +79,28 @@ body {
 	background-color: black;
 	overflow: auto;
 	margin-left: 10%;
-
+	border-style: ridge;
+    border-width: 5px;
+	box-shadow: 12px 12px 12px black;
 }
 
 #crystal-section {
 	clear: both;
 	background color: black;
 	position: absolute;
-	right: 37%;
+	right: 36%;
+	margin-top: 20px;
 	padding-top: 20px;
+	box-shadow: 12px 12px 12px black;
+
+}
+
+.purple-button {
+	box-shadow: 12px 12px 12px black;
+}
+.blue-button {
+	box-shadow: 12px 12px 12px black;
+}
+.green-button {
+	box-shadow: 12px 12px 12px black;
 }
