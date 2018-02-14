@@ -52,7 +52,7 @@ body {
 	float: left;
 	background-color: black;
 	overflow: auto;
-	margin-left: 18%;
+	margin-left: 15%;
 	border-style: ridge;
     border-width: 5px;
     box-shadow: 12px 12px 12px black;
@@ -82,21 +82,23 @@ body {
 	float: left;
 	background-color: black;
 	overflow: auto;
-	margin-left: 18%;
-	margin-top: 50px;
+	margin-left: 15%;
+	margin-top: 10px;
 	border-style: ridge;
     border-width: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 46px;
+    padding-right: 46px;
     padding-top: 10px;
+    padding-bottom: 20px;
 	box-shadow: 12px 12px 12px black;
 }
 
 #current-number-section {
 	text-align: center;
-	padding-left: 5px;
-	padding-right: 5px;
+	padding-left: 40px;
+	padding-right: 40px;
 	padding-top: 10px;
+	padding-bottom: 20px;
 }
 
 #your-score {
