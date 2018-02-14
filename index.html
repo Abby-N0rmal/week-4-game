@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <title>Crystal Collector</title>
 
-    <!-- jQuery Link -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Game Logic -->
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
 
   </head>
   <body>    
@@ -29,35 +26,41 @@
     </div>
 
     <div id="crystal-section">
-          <button class= "purple-button"><img src="assets/images/purple.jpg" height="200" width="75"></button>
-          <button class= "blue-button"><img src="assets/images/blue.jpg" height="200" width="75"></button>
-          <button class= "green-button"><img src="assets/images/green.jpg" height="200" width="75"></button>
-          <button class= "red-button"><img src="assets/images/red.jpg" height="200" width="75" ></button>
-          
-          
-          
+          <button id= "purple"><img src="assets/images/purple.jpg" height="200" width="75"></button>
+          <button id= "blue"><img src="assets/images/blue.jpg" height="200" width="75"></button>
+          <button id= "green"><img src="assets/images/green.jpg" height="200" width="75"></button>
+          <button id= "red"><img src="assets/images/red.jpg" height="200" width="75" ></button>
     </div>
 
-    <div id="current-number-section">
-          <h3 class="section-title"> Your number here</h3>
+    <div id="current-number-section"> Target Score
+          <h3 id="target-score"></h3>
           <!-- The div where the current number to guess will be shown. -->
+    </div>
+    <div id="total-score-section"> Your Number
+          <h3 id="your-score"></h3>
+          <!-- The div where the added number from the crystals is shown. -->
     </div>
           
     <div id="scorebox">  
       <h3 class="section-title">Score:</h3>
           <!-- The div where the wins will be shown. -->
-      <div id="wins">Wins:</div>
-        
-      <div id="losses">Losses:</div>
+      <div> Wins:
+        <h3 id="win-count"></h3>
+          <!--div where the wins will be shown -->
+      </div>
+      <div> Losses:
+        <h3 id="loss-count"></h3>
           <!-- The div where the losses will be shown. -->
+      </div>
     </div>
            
-    <div id="total-score-section">
-          <h3 class="section-title">Your total score is:</h3>
-          <!-- The div where the added number from the crystals is shown. -->
-     </div>
+    
         
-    </div>
-  </div>
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Main Game Logic  -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+  
  </body>
 </html>

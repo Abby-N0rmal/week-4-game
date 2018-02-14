@@ -1,6 +1,7 @@
 body {
 	background-image: url("../images/crystalBackground.jpg");
 	color: white;
+	font-family: 'Berkshire Swash', cursive;
 }
 
 .rainbow {
@@ -36,7 +37,8 @@ body {
 #scorebox {
 	text-align: center;
 	background-color: black;
-	float: right;
+	position: absolute;
+	margin-left: 77%;
 	overflow: auto;
 	margin-right: 10%;
 	border-style: ridge;
@@ -50,7 +52,7 @@ body {
 	float: left;
 	background-color: black;
 	overflow: auto;
-	margin-left: 10%;
+	margin-left: 18%;
 	border-style: ridge;
     border-width: 5px;
     box-shadow: 12px 12px 12px black;
@@ -63,14 +65,16 @@ body {
 	
 }
 
-#wins {
-	padding-right: 50px;
+#win-count {
+	
+	text-align: center;
 }
 
-#losses {
-	padding-right: 50px;
+#loss-count {
+	
 	padding-bottom: 50px;
 	padding-top: 10px;
+	text-align: center;
 }
 
 #total-score-section {
@@ -78,10 +82,25 @@ body {
 	float: left;
 	background-color: black;
 	overflow: auto;
-	margin-left: 10%;
+	margin-left: 18%;
+	margin-top: 50px;
 	border-style: ridge;
     border-width: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
 	box-shadow: 12px 12px 12px black;
+}
+
+#current-number-section {
+	text-align: center;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 10px;
+}
+
+#your-score {
+	text-align: center;
 }
 
 #crystal-section {
@@ -95,12 +114,12 @@ body {
 
 }
 
-.purple-button {
+#purple {
 	box-shadow: 12px 12px 12px black;
 }
-.blue-button {
+#blue {
 	box-shadow: 12px 12px 12px black;
 }
-.green-button {
+#green {
 	box-shadow: 12px 12px 12px black;
 }

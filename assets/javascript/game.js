@@ -1,112 +1,118 @@
-$(document).ready(function() {
+// Going to initialize the variables first
 
-	var matchingNumber = 0;
+//Crystals
+var crystal = {
+	purple:
+	{
+		name: "purple",
+		value: 0
+	},
 
-	var randomNumber = randomNumGen();
+	blue:
+	{
+		name: "blue",
+		value: 0
+	},
 
-	var wins = 0;
-	var losses= 0;
-	var crystals;
+	green:
+	{
+		name: "green",
+		value: 0
+	},
 
-	function randomNumCrystals() {
-		return{
-			purple: {
-				points: Math.floor(Math.random() * 12) + 1,
-				imageUrl: "assets/images/purple.jpg"
-			};
-			blue: {
-				points: Math.floor(Math.random() * 12) + 1,
-				iamgeUrl: "assets/images/blue.jpg"
-			};
-			green: {
-				points: Math.floor(Math.random() * 12) + 1,
-				imageUrl: "assets/images/green.jpg"
-			};
-			red: {
-				points: Math.floor(Math.random() * 12) + 1,
-				imageUrl: "assets/images/green.jpg"
-			}
-		};
+	red:
+	{
+		name: "red",
+		value: 0
 	}
-	
-	function randomNumGen() {
-		return Math.floor(Math.random() * 102) + 19;
-	}
+};
 
-	function setGame() {
-		yourmatchingNumber = 0;
-		crystals = randomNumCrystals();
-		randomNum = randomNumGen();
-		$("#random-area").text(randomNum);
-	}
+//Scores
+var currentScore= 0;
+var targetScore= 0;
 
-	function updateDom(didUserWin) {
-		$("#win-area").text(randomNum);
+// Wins and Losses
+var winCount = 0;
+var lossCount = 0;
 
-		if (didUserWin === true) {
-			$("#win-area").append($("<p>").text("You Won!"));
-			setGame();
-			renderMatchingNumber();
-		}
+//Moving on to Functions (this is where I get lost)
 
-		else if (didUserWin === false) {
-			$("#win-area").append($("<p>").text("You Lost!"));
-			setGame();
-			renderMatchingNumber();
-		}
+// Function for getting the random numbers
+var Random = function(min, max) {
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+};
 
-		var wSpan = $("<span>").text(wins);
-		var lSpan = $("<span>").text(losses);
+//Starts and restarts the game
+var startGame = function() {
+	//reset the current score
+	currentScore= 0;
+	// set new target score between 19 - 120
+	targetScore = Random( 19, 120);
 
-		var pWins = $("<p>").text("Wins: ");
-		var pLosses = $("<p>").text("Losses: ");
+	//set a different value for each crystal between 1 -12
+	crystal.purple.value = Random(1, 12);
+	crystal.blue.value = Random(1, 12);
+	crystal.green.value = Random(1, 12);
+	crystal.red.value = Random(1, 12);
 
-		pWins.append(wSpan);
-		pLosses.append(lSpan);
 
-		$("#win-area").append(pWins);
-		$("win-area").append(pLosses);
-	}
-
-	function renderCrystals() {
-		for (var key in crystals) {
-			var crystalDiv = $("<div class='crystals-button' data-name='" + key + "'>");
-			var crystalImg = $("<img alt'image' class='crystal-img'>").attr("src", crystals[key].imageUrl);
-			crystalDiv.append(crystalImg);
-			$("#crystal-area").append(crystalDiv);
-		}
+	// change the html to reflect all of these changes
+	$("#your-score").text(currentScore);
+	$("#target-score").text(targetScore);
+};
+// CHECK TO SEE IF PLAYER WON OR LOST GAME:
+var checkWin = function() {
+	if (currentScore > targetScore) {
+		alert("You Lost!");
+		//Adding 1 to loss counter
+		lossCount++;
+		//change loss count in html
+		$("#loss-count").text(lossCount);
+		//Restart game
+		startGame();
 	}
 
-	function updateMatchingNumber(crystal) {
-		var scoreNumDiv = $("<div id='score-number'>").text("data-name")].points;
+	else if (currentScore === targetScore) {
+		alert("You Won!!!");
+		// adding 1 to win counter
+		winCount++
+		//change the loss count in html
+		$("#win-count").text(winCount);
+		//restart game
+		startGame();
 	}
+};
 
-	function renderMatchingNumber() {
-		var scoreNumDiv = $("div id='score-number'>").text(yourMatchingNumber);
-		$("#score-area").html();
-		$("#score-area").html(scoreNumDiv);
-	}
+//Clicks on the cryrstals
+var addValues = function(clickedCrystal) {
+	//change currentScore
+	currentScore += clickedCrystal.value;
+	//change the html to reflect changes in currentScore
+	$("#your-score").text(currentScore);
+	// call checkwin function
+	checkWin();
+	//Testing console
+	console.log("Your Score: " + currentScore);
+};
 
-	setGame();
-	updateDom();
-	renderCrystals();
-	renderMatchingNumber();
+//MAIN PROCESS
+//=============================================
 
-	$(".crystals-button").on("click", function(event) {
-		updateMatchingNumber($(this));
-		renderMatchingNumber();
+//Starts game for the first time.
+startGame();
 
-		if (yourMatchingNumber === randomNum) {
-			wins++;
-			setGame();
-			updateDom(true);
-		}
+$("#purple").click(function() {
+	addValues(crystal.purple);
+});
 
-		else if (yourMatchingNumber > randomNum) {
-			losses++;
-			setGame();
-			updateDom(false);
-		}
-	});
+$("#blue").click(function() {
+	addValues(crystal.blue);
+});
 
+$("#green").click(function() {
+	addValues(crystal.green);
+});
+
+$("#red").click(function() {
+	addValues(crystal.red);
 });
